@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List App</title>
+  <!---------------Font Awesome CSS --------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!---------------Main CSS File--------------->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="time()">
+  <div class="todo-container">
+    <div class="date-hour">
+      <p class="date" id="date">Date</p>
+      <p class="hour" id="hour">Hour</p>
+    </div>
+
+    <header>
+      <h1>To Do List</h1>
+    </header>
+
+    <!---------------Enter the tasks--------------->
+    <form action="" id="todo-form">
+      <p>Add Your Task Here</p>
+      <div class="form-control">
+        <input type="text" id="todo-input" placeholder="Type here about your next task">
+        <button type="submit">
+          Add <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+    </form>
+
+    <!---------------Edit the tasks--------------->
+    <form action="" id="edit-form" class="hide">
+      <p>Edit Your Task</p>
+      <div class="form-control">
+        <input type="text" id="edit-input" placeholder="Type here about your next task">
+        <button type="submit">
+          <i class="fa-solid fa-check-double"></i>
+        </button>
+      </div>
+
+      <button type="button" class="cancel-edit-btn">Cancel</button>
+    </form>
+
+    <!---------------Task List--------------->
+    <div class="todo-list hide"></div>
+  </div>
+
+  <!--------------- JavaScript File--------------->
+  <script src="main.js"></script>
+</body>
+</html>

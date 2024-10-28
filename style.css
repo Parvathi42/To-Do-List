@@ -1,0 +1,211 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgb(255,255,255) 0%, rgba(54,132,223,1)100%);
+}
+
+.form-control{
+  display: flex;
+}
+
+.form-control input{
+  flex: 1;
+  outline: 0;
+  box-shadow: none;
+  border: 1px solid #858585;
+  margin-right: .8rem;
+}
+
+.form-control button{
+  background-color: #76df76;
+  border: 0px;
+}
+
+.form-control button:hover{
+  background-color: green;
+}
+
+.date-hour{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1rem 1.5rem 1rem;
+  font-size: 16px;
+  color: #102F5e;
+}
+
+button{
+  background-color: darkorange;
+  color: #102F5e;
+  border: 2px solid #102F5e;
+  padding: 0.2rem 0.4rem;
+  font-size: .8rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: .4s;
+  border: 1px solid #f5880e;
+}
+
+button:hover{
+  background-color: orangered;
+  color: white;
+}
+
+button i{
+  font-weight: bold;
+  pointer-events: none;
+}
+
+input{
+  padding: .4rem .5rem;
+}
+
+.hide{
+  display: none;
+}
+
+.todo-container{
+  background-color: #ecf0f1;
+  border-radius: 15px;
+  width: 450px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+}
+
+.todo-container header{
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+header h1{
+  padding-left: 16px;
+  border-left: 5px solid #e74c3c;
+}
+
+#todo-form,
+#edit-form{
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+#todo-form p,
+#edit-form p{
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+
+.cancel-edit-btn{
+  margin-top: 1rem;
+}
+
+.todo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.3rem 0.2rem;
+  border-bottom: 1px solid #ddd;
+  transition: .3s;
+}
+
+.todo h3{
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.todo button{
+  margin-left: 0.4rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #ecf0f1
+}
+
+.done{
+  background-color: green;
+}
+
+.done h3{
+  color: white;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.todo button:hover, .done button{
+  background-color: #395169;
+  color: #ecf0f1;
+}
+
+.done button:hover{
+  background-color: #ecf0f1;
+  color: #102f5e;
+}
+
+#todo-list{
+  max-height: 220px;
+  overflow: auto;
+}
+
+/* Media Queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .todo-container {
+    width: 90%; /* Use a percentage for better responsiveness */
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .date-hour {
+    flex-direction: column; /* Stack date and time vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  button {
+    width: 100%; /* Make buttons full-width */
+    margin-bottom: 0.5rem; /* Space between buttons */
+  }
+
+  .form-control {
+    flex-direction: column; /* Stack input and button vertically */
+  }
+
+  .form-control input {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 0.5rem; /* Add margin below */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .todo-container {
+    width: 95%; /* Slightly larger width for very small screens */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Increase header font size */
+    padding-left: 10px; /* Adjust padding */
+  }
+
+  .todo {
+    flex-direction: column; /* Stack todo title and buttons */
+    align-items: flex-start; /* Align items to the start */
+    padding: 0.5rem; /* Increase padding for better touch targets */
+  }
+
+  .todo h3 {
+    font-size: 1rem; /* Make the font size a bit larger */
+    margin-bottom: 0.5rem; /* Add space below the title */
+  }
+
+  button {
+    width: 100%; /* Full-width buttons for better usability */
+    margin-left: 0; /* Reset left margin */
+  }
+}

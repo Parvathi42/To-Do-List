@@ -180,6 +180,12 @@ header h1{
     margin-right: 0; /* Remove right margin */
     margin-bottom: 0.5rem; /* Add margin below */
   }
+
+  /* Ensure todo items maintain horizontal alignment */
+  .todo {
+    flex-direction: row; /* Keep items in a row */
+    justify-content: space-between; /* Distribute space evenly */
+  }
 }
 
 /* For mobile phones */
@@ -194,8 +200,9 @@ header h1{
   }
 
   .todo {
-    flex-direction: column; /* Stack todo title and buttons */
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: row; /* Ensure the todo items are in a row */
+    justify-content: space-between; /* Space out icons evenly */
+    align-items: center; /* Align items to the center */
     padding: 0.5rem; /* Increase padding for better touch targets */
   }
 
@@ -205,7 +212,7 @@ header h1{
   }
 
   button {
-    width: 100%; /* Full-width buttons for better usability */
-    margin-left: 0; /* Reset left margin */
+    width: auto; /* Keep button width auto for row alignment */
+    margin-left: 0.5rem; /* Space between buttons */
   }
 }
